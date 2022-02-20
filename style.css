@@ -1,3 +1,9 @@
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-b-white: #f1f0f7;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -18,10 +24,14 @@ body {
     text-align: center;
 }
 
+input:focus {
+    outline: none;
+}
+
 .list {
     width: 400px;
     margin: auto;
-    background-color: #f1f0f7;
+    background-color: var(--color-b-white);
     border-radius: 20px;
     -webkit-box-shadow: 26px 24px 24px -17px rgba(0, 0, 0, 0.56);
     -moz-box-shadow: 26px 24px 24px -17px rgba(0, 0, 0, 0.56);
@@ -29,13 +39,47 @@ body {
 }
 
 .header {
-    height: 48px;
+    /* height: 48px; */
     padding: 8px;
     font-size: 24px;
     background: rgb(138, 132, 255);
     background: linear-gradient(90deg, rgba(138, 132, 255, 1) 0%, rgba(255, 182, 182, 1) 100%);
     border-radius: 20px 20px 0 0;
+    color: var(--color-white);
+}
+
+.header__today {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__today-date {
+    border: none;
+    font-size: 15px;
     color: white;
+    text-align: center;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.header__today-date:hover {
+    cursor: pointer;
+}
+
+
+.header__today-location {
+    border-radius: var(--color-b-white);
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.header__today-location:focus {
+    outline: none;
 }
 
 .items {
@@ -74,23 +118,32 @@ body {
 }
 
 .footer__input {
-    width: 100%;
-    height: 32px;
+    display: flex;
+    height: 28px;
     border: none;
     outline: none;
     font-size: 24px;
-    padding: 0 16px;
+
+}
+
+.footer__text {
+    width: 70%;
+}
+
+.footer__number {
+    width: 30%;
 }
 
 .footer__button {
     width: 48px;
     height: 48px;
-    font-size: 28px;
-    background-color: black;
+    font-size: 32px;
+    /* background-color: black; */
     border-radius: 50px;
     color: white;
     transition: transform 300ms ease-in;
 }
+
 
 .footer__button:hover {
     transform: scale(1.1);

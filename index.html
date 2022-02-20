@@ -14,12 +14,23 @@
 <body>
     <section class="list">
         <header class="header">
-            Shopping List
+            <h2>Shopping List</h2>
+            <section class="header__today">
+                <input type="date" class="header__today-date" />
+                <select name="location" class="header__today-location">
+                    <option value="">🚩 장소를 선택해주세요</option>
+                    <option value="Metro">🚩 Walmart</option>
+                    <option value="Walmart">🚩 Lottemart</option>
+                    <option value="Bestbuy">🚩 Costco</option>
+                </select>
+            </section>
         </header>
-        <ul class="items">
+        <ul class=" items">
             <!-- <li class="item__row">
                 <div class="item">
                     <span class="item__name">Egg</span>
+                    <span class="item__location">location</span>
+                    <span class="item__price" >price</span>
                     <button class="item__delete">
                         <i class="fas fa-trash-can"></i>
                     </button>
@@ -27,10 +38,16 @@
                 <div class="item__divider"></div>
             </li> -->
         </ul>
+
+        <span class="total">Total price: <span class="total__price"> </span></span>
+
         <footer class="footer">
-            <input type="text" class="footer__input">
+            <div class="footer__input">
+                <input type="text" class="footer__text">
+                <input type="number" class="footer__number" />
+            </div>
             <button class="footer__button">
-                <i class="fas fa-plus"></i>
+                <i class="fa-solid fa-cart-plus"></i>
             </button>
         </footer>
     </section>
