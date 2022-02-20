@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+}
+
+button {
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: #ced3df;
+    text-align: center;
+}
+
+.list {
+    width: 400px;
+    margin: auto;
+    background-color: #f1f0f7;
+    border-radius: 20px;
+    -webkit-box-shadow: 26px 24px 24px -17px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow: 26px 24px 24px -17px rgba(0, 0, 0, 0.56);
+    box-shadow: 26px 24px 24px -17px rgba(0, 0, 0, 0.56);
+}
+
+.header {
+    height: 48px;
+    padding: 8px;
+    font-size: 24px;
+    background: rgb(138, 132, 255);
+    background: linear-gradient(90deg, rgba(138, 132, 255, 1) 0%, rgba(255, 182, 182, 1) 100%);
+    border-radius: 20px 20px 0 0;
+    color: white;
+}
+
+.items {
+    height: 500px;
+    /*item이 많아지면 자동으로 스크롤바가 생기게 만들어준다.*/
+    overflow-y: auto;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 32px;
+}
+
+.item__delete {
+    font-size: 16px;
+    transition: all 300ms ease-in;
+}
+
+.item__delete:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+.item__divider {
+    width: 90%;
+    height: 1px;
+    background-color: lightgray;
+    margin: auto;
+}
+
+.footer {
+    background: rgb(138, 132, 255);
+    background: linear-gradient(90deg, rgba(138, 132, 255, 1) 0%, rgba(255, 182, 182, 1) 100%);
+    border-radius: 0 0 20px 20px;
+}
+
+.footer__input {
+    width: 100%;
+    height: 32px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    padding: 0 16px;
+}
+
+.footer__button {
+    width: 48px;
+    height: 48px;
+    font-size: 28px;
+    background-color: black;
+    border-radius: 50px;
+    color: white;
+    transition: transform 300ms ease-in;
+}
+
+.footer__button:hover {
+    transform: scale(1.1);
+}
